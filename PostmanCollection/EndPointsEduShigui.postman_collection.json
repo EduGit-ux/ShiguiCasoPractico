@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "a66d01ca-be68-4c57-885a-701f9b5ff818",
+		"name": "ConexionesApiDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Clientes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreaCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clIdentificacion\": \"1785696541\",\r\n  \"clNombre\": \"Luis Yepez\",\r\n  \"clGenero\": \"Masculino\",\r\n  \"clEdad\": \"5\",\r\n  \"clDireccion\": \"La Napo Trebol\",\r\n  \"clTelefono\": \"0965851562\",\r\n  \"clContrasenia\": \"1234\",\r\n  \"clEstado\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCuenta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Cuentas/496825",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Cuentas",
+						"496825"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreaCuenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cuNumeroCuenta\": \"585545\",\r\n  \"cuIdCliente\": 1,\r\n  \"cuSaldoInicial\": 1000,\r\n  \"cuTipo\": \"Corriente\",\r\n  \"cuEstado\": true\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Cuentas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreditoCliente",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moNumeroCuenta\": \"496825\",\r\n  \"moTipoMovimiento\": \"Credito\",\r\n  \"moMovimientos\": 540\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DebitoCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moNumeroCuenta\": \"496825\",\r\n  \"moTipoMovimiento\": \"Debito\",\r\n  \"moMovimientos\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ValidarCupo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"moNumeroCuenta\": \"496825\",\r\n  \"moTipoMovimiento\": \"Cupo\",\r\n  \"moMovimientos\": 540000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Movimientos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Movimientos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaMovimientosFecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Movimientos/0503685624&2022-05-29&2022-05-30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Movimientos",
+						"0503685624&2022-05-29&2022-05-30"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
